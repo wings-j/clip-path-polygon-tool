@@ -2,7 +2,7 @@
     <h1>ClipPathTool</h1>
     <h4>
         <p>ClipPath 多边形工具</p>
-        <p>链接：<a href='https://wingsj0.github.io/ClipPathTool' target='_blank'>ClipPathTool</a></p>
+        <p>链接：<a href='https://wings-j.github.io/clip-path-polygon-tool/' target='_blank'>ClipPathTool</a></p>
     </h4>
 </header>
 <br/>
