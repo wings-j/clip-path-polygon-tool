@@ -1,0 +1,155 @@
+*
+{
+    padding:0;
+    margin:0;
+}
+a:link,a:hover,a:visited,a:active
+{
+    text-decoration: none;
+    color: currentColor;
+}
+body
+{
+    font-size:16px;
+    line-height: 1;
+    font-family: Consolas,Arial,'Microsoft JhangHei',sans-serif;
+    background:black;
+    color:rgb(0, 177, 0);
+}
+body *
+{
+    font-size:1rem;
+}
+
+/*container*/
+#container
+{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width:1100px;
+    min-height:700px;
+    width:100vw;
+    height:100vh;
+}
+
+/*top*/
+#top
+{
+    padding:1rem 2rem;
+}
+#top > *
+{
+    float:left;
+    margin-right:0.5rem;
+    font-size:1.2rem;
+}
+#top a
+{
+    text-decoration: underline;
+}
+
+#top_weibo
+{
+    float:right;
+    margin-right:0;
+}
+
+/*result*/
+#result
+{
+    overflow: hidden;
+    height:8rem;
+    border:2px solid green;
+    box-sizing:border-box;
+    padding:1rem;
+    margin:0.5rem 2rem 2rem 2rem;
+    line-height: 1.4;
+}
+
+/*main*/
+#main
+{
+    flex-basis: 0;
+    flex-grow:1;
+    display: flex;
+    border:2px solid green;
+    margin:0.5rem 2rem 0.5rem 2rem;
+}
+
+/*operation*/
+#operation
+{
+    flex-basis: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+#operation_axis
+{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+#operation_mask
+{
+    z-index:1;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-170px,-170px);
+}
+
+#operation_background,#operation_bottomBackground
+{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:300px;
+    height:300px;
+}
+#operation_background
+{
+    background:green;
+}
+#operation_bottomBackground
+{
+    border:2px solid green;
+}
+
+#operation_information
+{
+    padding:0.5rem;
+    line-height: 1.2;
+}
+
+#operation_note
+{
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left:calc(50% - 150px);
+    top:calc(50% + 200px);
+    font-size:1.4rem;
+    white-space: nowrap;
+    animation-name: operation_note_typing;
+    animation-duration: 0.7s;
+}
+#operation_note::before
+{
+    content: '■ ';
+}
+
+@keyframes operation_note_typing
+{
+    0%{width:0;}
+}
+
+/*control*/
+#control
+{
+    width:4rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Clip-Path 工具 - WingsJ</title>
+
+    <link href='./index.css' rel='stylesheet'/>
+    <script src='./index.js'></script>
+</head>
+<body>
+    <div id='container'>
+        <div id='top'>
+            <a href='./index.html'>Clip-Path Polygon Tool</a><span>使用 CSS clip-path 生成你想要的多边形</span>
+            <a id='top_weibo' href='http://weibo.com/comicwings' target='_blank'>微博</a>
+        </div>
+        <div id='main'>
+            <div id='operation'>
+                <img id='operation_axis' src='./image/Axis.png'/>
+                <div id='operation_bottomBackground'></div>
+                <div id='operation_background'></div>
+                <canvas id='operation_mask' width=600 height=340></canvas>
+                <pre id='operation_information'>
+> 点击方框内创建锚点
+> 拖动锚点改变位置
+> Alt + 点击：删除锚点
+> Shift + 拖动：锁定方向移动
+> Ctrl + 拖动：整体移动
+> C：清除所有锚点
+> G：显示或隐藏网格
+> N：显示或隐藏锚点指示
+                </pre>
+                <div id='operation_note'></div>
+            </div>
+        </div>
+        <fieldset id='result'>
+            <legend>&nbsp;输出&nbsp;</legend>
+            <div id='result_content'>clip-path: polygon(  );</div>
+        </fieldset>
+    </div>
+</body>
+</html>
